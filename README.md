@@ -14,7 +14,7 @@ git clone https://github.com/politrons/Who-is-watching.git
 * Run the application.
 ```
 go run src/politrons/*.go
-``
+```
 * Paste in your browser the url passing your facebook credemtials.
 ```
 http://localhost:8080/?username=**********&password=*******
