@@ -8,7 +8,10 @@ import (
 )
 
 func handler(w http.ResponseWriter, request *http.Request) {
-	visitors := getVisitors()
+	queryValues := request.URL.Query()
+	username := queryValues.Get("username")
+	password := queryValues.Get("password")
+	visitors := getVisitors(username, password)
 	for visitor, _ := range visitors {
 		createVisitorPage(visitor)
 		visitor_page := visitor + ".html"
@@ -23,7 +26,6 @@ func handler(w http.ResponseWriter, request *http.Request) {
 	w.Write(data)
 	//fmt.Fprintf(w, "Hi there, I love %s!", string(data))
 }
-
 
 func main() {
 	http.HandleFunc("/", handler)
