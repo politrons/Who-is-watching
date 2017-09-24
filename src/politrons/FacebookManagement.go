@@ -28,9 +28,7 @@ func transformVisitorJsonToMap(visitorsJson []byte) map[string]int {
 
 func createVisitorPage(visitor string) {
 	fmt.Println(fmt.Sprintf("Creating visitor profile:%s", visitor))
-	get_visitor_query := "curl --location GET 'https://www.facebook.com/profile.php?id=${visitor}' --verbose --user-agent 'Firefox' " +
-		"--cookie 'cookies.txt' --cookie-jar 'cookies.txt' > ${visitor}.html"
-	get_visitor_query = strings.Replace(get_visitor_query, "${visitor}", visitor, -1)
+	get_visitor_query := strings.Replace(get_visitor, "${visitor}", visitor, -1)
 	command([]string{get_visitor_query})
 }
 
