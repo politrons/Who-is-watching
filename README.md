@@ -14,12 +14,12 @@ git clone https://github.com/politrons/Who-is-watching.git
 * Run the application.
 ```
 go run src/politrons/*.go
-```
-* Paste in your browser the url passing your facebook credemtials.
+``
+* Paste in your browser the url, passing your facebook credentials.
 ```
 http://localhost:8080/?username=**********&password=*******
 ```
 
-This a total free open source tool, which I´m not responsable about how people might decide to modify it and use it.
-Obliously this project is not persisting any personal informacion of any consumer aka credentials.
-Is a really simple app, just to enjoy myself and learn a little bit about Golang.
+This a total free open source tool. I´m not responsable about how people might decide to modify it and use it.
+Obiously this app is not persisting any personal informacion of any consumer aka credentials.
+Is a really simple app, just to enjoy myself and learn a little bit about [Golang](https://golang.org/).
